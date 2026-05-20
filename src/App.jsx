@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 
 function App() {
 
-  // State for tasks
+  
   const [tasks, setTasks] = useState([]);
 
-  // State for form inputs
+  
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
 
-  // useEffect Hook
+  
   useEffect(() => {
 
     const sampleTasks = [
@@ -30,12 +30,12 @@ function App() {
 
   }, []);
 
-  // Add Task Function
+  
   const addTask = (e) => {
 
     e.preventDefault();
 
-    // Validation
+    
     if(title.trim() === "" || category.trim() === ""){
       alert("Please fill all fields");
       return;
@@ -53,7 +53,7 @@ function App() {
     setCategory("");
   };
 
-  // Delete Task Function
+  
   const deleteTask = (id) => {
 
     const updatedTasks = tasks.filter(
